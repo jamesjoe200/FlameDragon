@@ -13,4 +13,17 @@ editorToggle.addEventListener('click', () => {
   editor.render()
 })
 
-game.start()
+game.start().catch((err: unknown) => {
+  const ctx = canvas.getContext('2d')!
+  ctx.fillStyle = '#000'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  ctx.fillStyle = '#ff4444'
+  ctx.font = 'bold 16px monospace'
+  ctx.textAlign = 'center'
+  ctx.fillText('Failed to load game data', canvas.width / 2, canvas.height / 2 - 20)
+  ctx.fillStyle = '#aaa'
+  ctx.font = '12px monospace'
+  const msg = err instanceof Error ? err.message : String(err)
+  ctx.fillText(msg, canvas.width / 2, canvas.height / 2 + 10)
+  console.error('Game start failed:', err)
+})

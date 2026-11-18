@@ -83,7 +83,9 @@ export interface Unit {
   uid: string
   name: string
   isPlayer: boolean
+  charId: number                 // source CharacterData/AppearanceData id (-1 for enemies)
   level: number
+  xp: number                    // current XP toward next level
   hp: number; maxHp: number
   mp: number; maxMp: number
   ap: number; dp: number; ev: number; mv: number
