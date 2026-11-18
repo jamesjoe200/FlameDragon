@@ -1,0 +1,13 @@
+# Original game files (not distributed)
+炎龙骑士团合集/
+炎龙骑士团合集.zip
+
+# Build output
+fd2/dist/
+
+# Dependencies
+fd2/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,418 @@
+[
+  {
+    "character": "悠妮",
+    "sequence_id": 0,
+    "learns": [
+      {
+        "level": 5,
+        "spell_id": 17
+      },
+      {
+        "level": 9,
+        "spell_id": 1
+      },
+      {
+        "level": 15,
+        "spell_id": 26
+      },
+      {
+        "level": 21,
+        "spell_id": 2
+      },
+      {
+        "level": 26,
+        "spell_id": 27
+      }
+    ]
+  },
+  {
+    "character": "瑪琳",
+    "sequence_id": 1,
+    "learns": [
+      {
+        "level": 7,
+        "spell_id": 20
+      },
+      {
+        "level": 11,
+        "spell_id": 14
+      },
+      {
+        "level": 16,
+        "spell_id": 18
+      },
+      {
+        "level": 24,
+        "spell_id": 22
+      },
+      {
+        "level": 30,
+        "spell_id": 23
+      }
+    ]
+  },
+  {
+    "character": "索菲亞",
+    "sequence_id": 2,
+    "learns": [
+      {
+        "level": 18,
+        "spell_id": 19
+      },
+      {
+        "level": 24,
+        "spell_id": 21
+      },
+      {
+        "level": 30,
+        "spell_id": 25
+      }
+    ]
+  },
+  {
+    "character": "珊",
+    "sequence_id": 3,
+    "learns": [
+      {
+        "level": 20,
+        "spell_id": 10
+      },
+      {
+        "level": 24,
+        "spell_id": 6
+      }
+    ]
+  },
+  {
+    "character": "索爾(劍聖)",
+    "sequence_id": 4,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 24
+      }
+    ]
+  },
+  {
+    "character": "密蒂",
+    "sequence_id": 5,
+    "learns": [
+      {
+        "level": 2,
+        "spell_id": 30
+      }
+    ]
+  },
+  {
+    "character": "鐵諾(劍聖)",
+    "sequence_id": 6,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 29
+      }
+    ]
+  },
+  {
+    "character": "悠妮(大法師)",
+    "sequence_id": 7,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 27
+      },
+      {
+        "level": 7,
+        "spell_id": 3
+      },
+      {
+        "level": 13,
+        "spell_id": 19
+      },
+      {
+        "level": 22,
+        "spell_id": 11
+      }
+    ]
+  },
+  {
+    "character": "亞齊梅吉/珊(大法師)",
+    "sequence_id": 8,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 2
+      },
+      {
+        "level": 8,
+        "spell_id": 7
+      },
+      {
+        "level": 12,
+        "spell_id": 11
+      }
+    ]
+  },
+  {
+    "character": "瑪琳(祭師)",
+    "sequence_id": 9,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 15
+      },
+      {
+        "level": 9,
+        "spell_id": 21
+      },
+      {
+        "level": 18,
+        "spell_id": 19
+      },
+      {
+        "level": 23,
+        "spell_id": 16
+      }
+    ]
+  },
+  {
+    "character": "索爾(英雄)",
+    "sequence_id": 10,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 15
+      },
+      {
+        "level": 8,
+        "spell_id": 3
+      },
+      {
+        "level": 14,
+        "spell_id": 7
+      },
+      {
+        "level": 20,
+        "spell_id": 8
+      },
+      {
+        "level": 24,
+        "spell_id": 12
+      },
+      {
+        "level": 30,
+        "spell_id": 23
+      }
+    ]
+  },
+  {
+    "character": "瑪琳(聖者)",
+    "sequence_id": 11,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 15
+      },
+      {
+        "level": 9,
+        "spell_id": 8
+      },
+      {
+        "level": 16,
+        "spell_id": 19
+      },
+      {
+        "level": 21,
+        "spell_id": 21
+      },
+      {
+        "level": 26,
+        "spell_id": 16
+      }
+    ]
+  },
+  {
+    "character": "索菲亞(聖者)",
+    "sequence_id": 12,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 15
+      },
+      {
+        "level": 8,
+        "spell_id": 8
+      },
+      {
+        "level": 15,
+        "spell_id": 27
+      },
+      {
+        "level": 20,
+        "spell_id": 21
+      },
+      {
+        "level": 25,
+        "spell_id": 16
+      }
+    ]
+  },
+  {
+    "character": "珊(聖者)",
+    "sequence_id": 13,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 15
+      },
+      {
+        "level": 10,
+        "spell_id": 8
+      },
+      {
+        "level": 15,
+        "spell_id": 22
+      },
+      {
+        "level": 20,
+        "spell_id": 20
+      },
+      {
+        "level": 24,
+        "spell_id": 7
+      }
+    ]
+  },
+  {
+    "character": "悠妮(聖者)",
+    "sequence_id": 14,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 15
+      },
+      {
+        "level": 9,
+        "spell_id": 8
+      },
+      {
+        "level": 16,
+        "spell_id": 21
+      },
+      {
+        "level": 21,
+        "spell_id": 18
+      },
+      {
+        "level": 25,
+        "spell_id": 3
+      }
+    ]
+  },
+  {
+    "character": "哈諾(魔戰士)",
+    "sequence_id": 15,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 18
+      },
+      {
+        "level": 11,
+        "spell_id": 15
+      },
+      {
+        "level": 18,
+        "spell_id": 20
+      }
+    ]
+  },
+  {
+    "character": "哈瓦特(魔戰士)",
+    "sequence_id": 16,
+    "learns": [
+      {
+        "level": 3,
+        "spell_id": 19
+      },
+      {
+        "level": 9,
+        "spell_id": 15
+      },
+      {
+        "level": 16,
+        "spell_id": 20
+      }
+    ]
+  },
+  {
+    "character": "達克塞",
+    "sequence_id": 17,
+    "learns": [
+      {
+        "level": 15,
+        "spell_id": 11
+      },
+      {
+        "level": 20,
+        "spell_id": 18
+      },
+      {
+        "level": 23,
+        "spell_id": 11
+      }
+    ]
+  },
+  {
+    "character": "索菲亞(祭師)",
+    "sequence_id": 18,
+    "learns": [
+      {
+        "level": 4,
+        "spell_id": 15
+      },
+      {
+        "level": 10,
+        "spell_id": 22
+      },
+      {
+        "level": 18,
+        "spell_id": 16
+      },
+      {
+        "level": 24,
+        "spell_id": 18
+      }
+    ]
+  },
+  {
+    "character": "悠妮(召喚師)",
+    "sequence_id": 19,
+    "learns": [
+      {
+        "level": 2,
+        "spell_id": 34
+      },
+      {
+        "level": 6,
+        "spell_id": 35
+      },
+      {
+        "level": 11,
+        "spell_id": 23
+      },
+      {
+        "level": 15,
+        "spell_id": 3
+      },
+      {
+        "level": 19,
+        "spell_id": 33
+      },
+      {
+        "level": 23,
+        "spell_id": 32
+      }
+    ]
+  }
+]

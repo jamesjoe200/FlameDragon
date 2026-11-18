@@ -1,0 +1,519 @@
+[
+  {
+    "id": 18,
+    "name": "蜜蒂",
+    "type": 1,
+    "entry_level": 1,
+    "entry_hp": 280,
+    "entry_mp": 8,
+    "entry_mv": 5,
+    "entry_items": [
+      7,
+      138
+    ],
+    "entry_spells": [],
+    "info": "《蜜蒂》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 19,
+    "name": "羅德曼",
+    "type": 2,
+    "entry_level": 20,
+    "entry_hp": 272,
+    "entry_mp": 0,
+    "entry_mv": 5,
+    "entry_items": [
+      8,
+      143
+    ],
+    "entry_spells": [
+      16
+    ],
+    "info": "《羅德曼》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 20,
+    "name": "莎拉",
+    "type": 2,
+    "entry_level": 12,
+    "entry_hp": 290,
+    "entry_mp": 0,
+    "entry_mv": 9,
+    "entry_items": [
+      27,
+      151,
+      195
+    ],
+    "entry_spells": [],
+    "info": "《莎拉》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 21,
+    "name": "約拿",
+    "type": 1,
+    "entry_level": 5,
+    "entry_hp": 220,
+    "entry_mp": 140,
+    "entry_mv": 4,
+    "entry_items": [
+      57,
+      169
+    ],
+    "entry_spells": [
+      193,
+      124
+    ],
+    "info": "《約拿》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 22,
+    "name": "卡裡斯",
+    "type": 2,
+    "entry_level": 20,
+    "entry_hp": 316,
+    "entry_mp": 0,
+    "entry_mv": 5,
+    "entry_items": [
+      69,
+      177
+    ],
+    "entry_spells": [],
+    "info": "《卡裡斯》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 23,
+    "name": "羅蘭",
+    "type": 2,
+    "entry_level": 7,
+    "entry_hp": 235,
+    "entry_mp": 0,
+    "entry_mv": 5,
+    "entry_items": [
+      97,
+      151
+    ],
+    "entry_spells": [],
+    "info": "《羅蘭》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 24,
+    "name": "希爾法",
+    "type": 2,
+    "entry_level": 8,
+    "entry_hp": 190,
+    "entry_mp": 150,
+    "entry_mv": 4,
+    "entry_items": [
+      58,
+      169
+    ],
+    "entry_spells": [
+      224,
+      121
+    ],
+    "info": "《希爾法》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 25,
+    "name": "謝多",
+    "type": 2,
+    "entry_level": 7,
+    "entry_hp": 380,
+    "entry_mp": 20,
+    "entry_mv": 7,
+    "entry_items": [
+      17,
+      141,
+      195,
+      195
+    ],
+    "entry_spells": [
+      68,
+      8,
+      8
+    ],
+    "info": "《謝多》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 26,
+    "name": "聖寇拉斯",
+    "type": 2,
+    "entry_level": 18,
+    "entry_hp": 294,
+    "entry_mp": 0,
+    "entry_mv": 7,
+    "entry_items": [
+      10,
+      142,
+      195,
+      195
+    ],
+    "entry_spells": [],
+    "info": "《聖寇拉斯》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 27,
+    "name": "巴拿羅西亞",
+    "type": 2,
+    "entry_level": 5,
+    "entry_hp": 300,
+    "entry_mp": 0,
+    "entry_mv": 7,
+    "entry_items": [
+      17,
+      139
+    ],
+    "entry_spells": [],
+    "info": "《巴拿羅西亞》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 28,
+    "name": "達克塞",
+    "type": 1,
+    "entry_level": 10,
+    "entry_hp": 300,
+    "entry_mp": 10,
+    "entry_mv": 5,
+    "entry_items": [
+      65,
+      176
+    ],
+    "entry_spells": [
+      64,
+      2,
+      4
+    ],
+    "info": "《達克塞》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 29,
+    "name": "亞齊梅吉",
+    "type": 1,
+    "entry_level": 20,
+    "entry_hp": 150,
+    "entry_mp": 60,
+    "entry_mv": 6,
+    "entry_items": [
+      59,
+      170
+    ],
+    "entry_spells": [
+      28,
+      2,
+      12
+    ],
+    "info": "《亞齊梅吉》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 30,
+    "name": "蓋亞",
+    "type": 1,
+    "entry_level": 1,
+    "entry_hp": 50,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      72,
+      178
+    ],
+    "entry_spells": [],
+    "info": "《蓋亞》的登場數據修改後，第一次登場時即可生效"
+  },
+  {
+    "id": 31,
+    "name": "渥德",
+    "type": 2,
+    "entry_level": 50,
+    "entry_hp": 12,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      75,
+      181
+    ],
+    "entry_spells": [],
+    "info": "《渥德》的登場數據修改後，第一次登場時即可生效"
+  },
+  {
+    "id": 0,
+    "name": "索爾",
+    "type": 1,
+    "entry_level": 1,
+    "entry_hp": 42,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      0,
+      132,
+      192
+    ],
+    "entry_spells": [],
+    "info": "《索爾》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 1,
+    "name": "哈諾",
+    "type": 2,
+    "entry_level": 1,
+    "entry_hp": 36,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      32,
+      128
+    ],
+    "entry_spells": [],
+    "info": "《哈諾》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 2,
+    "name": "鐵諾",
+    "type": 1,
+    "entry_level": 4,
+    "entry_hp": 40,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      0,
+      128
+    ],
+    "entry_spells": [],
+    "info": "《鐵諾》的登場數據修改後，第一次登場部分數據無效。需正式加入方可全部生效"
+  },
+  {
+    "id": 3,
+    "name": "哈瓦特",
+    "type": 1,
+    "entry_level": 23,
+    "entry_hp": 30,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      36,
+      147
+    ],
+    "entry_spells": [],
+    "info": "《哈瓦特》的數據為(哈斯米爾之戰)那一章的數據，修改後，第一次登場部分數據無效。正式加入後全部才有效"
+  },
+  {
+    "id": 4,
+    "name": "亞雷斯",
+    "type": 1,
+    "entry_level": 1,
+    "entry_hp": 48,
+    "entry_mp": 0,
+    "entry_mv": 7,
+    "entry_items": [
+      20,
+      128
+    ],
+    "entry_spells": [],
+    "info": "《亞雷斯》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 5,
+    "name": "洛娜",
+    "type": 2,
+    "entry_level": 12,
+    "entry_hp": 72,
+    "entry_mp": 0,
+    "entry_mv": 7,
+    "entry_items": [
+      22,
+      135
+    ],
+    "entry_spells": [],
+    "info": "《洛娜》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 6,
+    "name": "萊汀",
+    "type": 1,
+    "entry_level": 18,
+    "entry_hp": 70,
+    "entry_mp": 0,
+    "entry_mv": 6,
+    "entry_items": [
+      23,
+      135
+    ],
+    "entry_spells": [],
+    "info": "《萊汀》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 7,
+    "name": "蘭斯洛特",
+    "type": 1,
+    "entry_level": 4,
+    "entry_hp": 281,
+    "entry_mp": 0,
+    "entry_mv": 8,
+    "entry_items": [
+      30,
+      150
+    ],
+    "entry_spells": [],
+    "info": "《蘭斯洛特》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 8,
+    "name": "希莉亞",
+    "type": 2,
+    "entry_level": 3,
+    "entry_hp": 32,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      44,
+      129
+    ],
+    "entry_spells": [],
+    "info": "《希莉亞》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 9,
+    "name": "悠妮",
+    "type": 1,
+    "entry_level": 1,
+    "entry_hp": 28,
+    "entry_mp": 8,
+    "entry_mv": 4,
+    "entry_items": [
+      52,
+      164
+    ],
+    "entry_spells": [
+      1
+    ],
+    "info": "《悠妮》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 10,
+    "name": "瑪琳",
+    "type": 2,
+    "entry_level": 6,
+    "entry_hp": 38,
+    "entry_mp": 12,
+    "entry_mv": 3,
+    "entry_items": [
+      53,
+      165
+    ],
+    "entry_spells": [
+      32
+    ],
+    "info": "《瑪琳》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 11,
+    "name": "索菲亞",
+    "type": 1,
+    "entry_level": 16,
+    "entry_hp": 30,
+    "entry_mp": 24,
+    "entry_mv": 3,
+    "entry_items": [
+      54,
+      167,
+      209
+    ],
+    "entry_spells": [
+      64,
+      64
+    ],
+    "info": "《索菲亞》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 12,
+    "name": "凱麗",
+    "type": 1,
+    "entry_level": 10,
+    "entry_hp": 52,
+    "entry_mp": 0,
+    "entry_mv": 5,
+    "entry_items": [
+      62,
+      172
+    ],
+    "entry_spells": [],
+    "info": "《凱麗》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 13,
+    "name": "貝克威",
+    "type": 2,
+    "entry_level": 9,
+    "entry_hp": 40,
+    "entry_mp": 0,
+    "entry_mv": 4,
+    "entry_items": [
+      45,
+      135,
+      193
+    ],
+    "entry_spells": [],
+    "info": "《貝克威》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 14,
+    "name": "珊",
+    "type": 1,
+    "entry_level": 16,
+    "entry_hp": 66,
+    "entry_mp": 40,
+    "entry_mv": 4,
+    "entry_items": [
+      55,
+      168
+    ],
+    "entry_spells": [
+      50
+    ],
+    "info": "《珊》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 15,
+    "name": "塞克邦勒",
+    "type": 1,
+    "entry_level": 23,
+    "entry_hp": 100,
+    "entry_mp": 0,
+    "entry_mv": 5,
+    "entry_items": [
+      63,
+      174
+    ],
+    "entry_spells": [],
+    "info": "《塞可邦勒》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  },
+  {
+    "id": 16,
+    "name": "凱拉斯",
+    "type": 1,
+    "entry_level": 2,
+    "entry_hp": 330,
+    "entry_mp": 0,
+    "entry_mv": 7,
+    "entry_items": [
+      16,
+      138
+    ],
+    "entry_spells": [],
+    "info": "《凱拉斯》的登場數據修改後，第一次登場即可生效"
+  },
+  {
+    "id": 17,
+    "name": "米亞斯多德",
+    "type": 1,
+    "entry_level": 21,
+    "entry_hp": 65,
+    "entry_mp": 0,
+    "entry_mv": 6,
+    "entry_items": [
+      4,
+      136
+    ],
+    "entry_spells": [],
+    "info": "《米亞斯多德》的登場數據修改後，第一次登場部分數據無效。需正式加入隊伍方可全部生效"
+  }
+]

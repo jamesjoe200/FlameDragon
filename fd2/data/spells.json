@@ -1,0 +1,326 @@
+[
+  {
+    "id": 0,
+    "name": "火炎術",
+    "power": 50,
+    "accuracy": 90,
+    "range": 5,
+    "aoe": 0,
+    "mp_cost": 2
+  },
+  {
+    "id": 1,
+    "name": "烈炎術",
+    "power": 120,
+    "accuracy": 90,
+    "range": 5,
+    "aoe": 0,
+    "mp_cost": 6
+  },
+  {
+    "id": 2,
+    "name": "炎龍術",
+    "power": 250,
+    "accuracy": 90,
+    "range": 5,
+    "aoe": 1,
+    "mp_cost": 20
+  },
+  {
+    "id": 3,
+    "name": "天火術",
+    "power": 500,
+    "accuracy": 85,
+    "range": 5,
+    "aoe": 1,
+    "mp_cost": 42
+  },
+  {
+    "id": 4,
+    "name": "電擊術",
+    "power": 40,
+    "accuracy": 85,
+    "range": 4,
+    "aoe": 1,
+    "mp_cost": 4
+  },
+  {
+    "id": 5,
+    "name": "落雷術",
+    "power": 100,
+    "accuracy": 80,
+    "range": 4,
+    "aoe": 1,
+    "mp_cost": 15
+  },
+  {
+    "id": 6,
+    "name": "轟雷術",
+    "power": 220,
+    "accuracy": 80,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 30
+  },
+  {
+    "id": 7,
+    "name": "神雷術",
+    "power": 450,
+    "accuracy": 80,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 60
+  },
+  {
+    "id": 8,
+    "name": "聖光彈",
+    "power": 440,
+    "accuracy": 100,
+    "range": 8,
+    "aoe": 0,
+    "mp_cost": 24
+  },
+  {
+    "id": 9,
+    "name": "咒殺術",
+    "power": 999,
+    "accuracy": 50,
+    "range": 3,
+    "aoe": 0,
+    "mp_cost": 30
+  },
+  {
+    "id": 10,
+    "name": "碎巖術",
+    "power": 80,
+    "accuracy": 95,
+    "range": 0,
+    "aoe": 5,
+    "mp_cost": 18
+  },
+  {
+    "id": 11,
+    "name": "地震術",
+    "power": 160,
+    "accuracy": 90,
+    "range": 0,
+    "aoe": 7,
+    "mp_cost": 45
+  },
+  {
+    "id": 12,
+    "name": "裂地術",
+    "power": 340,
+    "accuracy": 90,
+    "range": 0,
+    "aoe": 9,
+    "mp_cost": 80
+  },
+  {
+    "id": 13,
+    "name": "治療術",
+    "power": 70,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 0,
+    "mp_cost": 3
+  },
+  {
+    "id": 14,
+    "name": "回復術",
+    "power": 140,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 1,
+    "mp_cost": 10
+  },
+  {
+    "id": 15,
+    "name": "再生術",
+    "power": 260,
+    "accuracy": 0,
+    "range": 5,
+    "aoe": 2,
+    "mp_cost": 20
+  },
+  {
+    "id": 16,
+    "name": "神恩術",
+    "power": 500,
+    "accuracy": 0,
+    "range": 5,
+    "aoe": 3,
+    "mp_cost": 40
+  },
+  {
+    "id": 17,
+    "name": "攻擊術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 5
+  },
+  {
+    "id": 18,
+    "name": "防禦術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 5
+  },
+  {
+    "id": 19,
+    "name": "速度術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 8
+  },
+  {
+    "id": 20,
+    "name": "解毒術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 5
+  },
+  {
+    "id": 21,
+    "name": "祛麻術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 5
+  },
+  {
+    "id": 22,
+    "name": "封咒術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 8
+  },
+  {
+    "id": 23,
+    "name": "傳送術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 3,
+    "aoe": 0,
+    "mp_cost": 20
+  },
+  {
+    "id": 24,
+    "name": "破龍擊",
+    "power": 0,
+    "accuracy": 0,
+    "range": 5,
+    "aoe": 1,
+    "mp_cost": 22
+  },
+  {
+    "id": 25,
+    "name": "行動術",
+    "power": 0,
+    "accuracy": 0,
+    "range": 3,
+    "aoe": 1,
+    "mp_cost": 24
+  },
+  {
+    "id": 26,
+    "name": "施毒術",
+    "power": 10,
+    "accuracy": 50,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 8
+  },
+  {
+    "id": 27,
+    "name": "麻痺術",
+    "power": 10,
+    "accuracy": 50,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 10
+  },
+  {
+    "id": 28,
+    "name": "淒煌斬",
+    "power": 0,
+    "accuracy": 0,
+    "range": 1,
+    "aoe": 0,
+    "mp_cost": 22
+  },
+  {
+    "id": 29,
+    "name": "熾炎刀",
+    "power": 0,
+    "accuracy": 0,
+    "range": 0,
+    "aoe": 2,
+    "mp_cost": 26
+  },
+  {
+    "id": 30,
+    "name": "音速刃",
+    "power": 0,
+    "accuracy": 0,
+    "range": 20,
+    "aoe": 0,
+    "mp_cost": 24
+  },
+  {
+    "id": 31,
+    "name": "無",
+    "power": 0,
+    "accuracy": 0,
+    "range": 0,
+    "aoe": 2,
+    "mp_cost": 26
+  },
+  {
+    "id": 32,
+    "name": "熾天使",
+    "power": 800,
+    "accuracy": 90,
+    "range": 5,
+    "aoe": 3,
+    "mp_cost": 76
+  },
+  {
+    "id": 33,
+    "name": "風妖精",
+    "power": 0,
+    "accuracy": 0,
+    "range": 5,
+    "aoe": 3,
+    "mp_cost": 52
+  },
+  {
+    "id": 34,
+    "name": "破壞神",
+    "power": 0,
+    "accuracy": 0,
+    "range": 5,
+    "aoe": 3,
+    "mp_cost": 28
+  },
+  {
+    "id": 35,
+    "name": "暗邪鬼",
+    "power": 0,
+    "accuracy": 0,
+    "range": 4,
+    "aoe": 2,
+    "mp_cost": 36
+  }
+]
