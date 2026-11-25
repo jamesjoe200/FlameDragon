@@ -1,6 +1,7 @@
 import { loadGameData } from './DataLoader'
 import { TitleScene } from '../scenes/TitleScene'
 import { MapScene } from '../scenes/MapScene'
+import { SpriteLoader } from './SpriteLoader'
 import type { GameData, SceneName, Unit } from '../types'
 export { CANVAS_W, CANVAS_H, TILE_SIZE } from './constants'
 import { CANVAS_W, CANVAS_H } from './constants'
@@ -18,6 +19,8 @@ export class Game {
   private scene!: Scene
   private lastTime = 0
   private rafId = 0
+
+  sprites = new SpriteLoader()
 
   mods = {
     enemyMultiplier: 1,
@@ -40,8 +43,10 @@ export class Game {
     try {
       this.showLoading('Loading game data...')
       this.data = await loadGameData()
+      this.showLoading('Loading sprites...')
+      await this.sprites.load([1, 2, 3])
       this.showLoading(`Loaded OK — ${this.data.characters.length} chars, starting...`)
-      await new Promise(r => setTimeout(r, 400))
+      await new Promise(r => setTimeout(r, 300))
       this.switchScene('title')
       this.loop(0)
     } catch (err) {

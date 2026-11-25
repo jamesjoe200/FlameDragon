@@ -81,46 +81,51 @@ export function xpForKill(enemy: Unit): number {
   return enemy.level * 15 + 10
 }
 
-// Stage configs — Chapter index maps to a battle scenario
-// IDs reference AppearanceData (players) and EnemyData (enemies)
+// Stage configs — Chapter index maps to a battle scenario.
+// players[]: AppearanceData IDs. 索爾(0) is always first — lord unit.
+// enemies[]: EnemyData IDs. IDs 0-7 are friendly NPCs; use 8+ for actual enemies.
 export const STAGE_CONFIGS: Array<{
   name: string
-  players: number[]
+  players: number[]          // 索爾 (id=0) must always be included
+  lordId: number             // which player charId is the lord (death = game over)
   enemies: Array<{ id: number; x: number; y: number }>
 }> = [
   {
-    // Chapter 1: 索爾(0) + 悠妮(9) vs a few enemy soldiers
+    // Chapter 1: 索爾(0) + 哈諾(1) + 鐵諾(2) + 悠妮(9) vs soldiers
     name: '第一章 — 戰場初陣',
-    players: [0, 9, 1, 2],
+    players: [0, 1, 2, 9],
+    lordId: 0,
     enemies: [
-      { id: 3,  x: 15, y: 4 },
-      { id: 3,  x: 16, y: 5 },
-      { id: 4,  x: 17, y: 6 },
+      { id: 8,  x: 15, y: 4 },   // 士兵
+      { id: 8,  x: 16, y: 6 },   // 士兵
+      { id: 14, x: 17, y: 5 },   // 騎兵
     ],
   },
   {
-    // Chapter 2: larger party
+    // Chapter 2: more allies join; heavier opposition
     name: '第二章 — 敵軍逼近',
-    players: [0, 9, 1, 2, 4, 8],
+    players: [0, 1, 2, 9, 4, 8],
+    lordId: 0,
     enemies: [
-      { id: 3,  x: 14, y: 3 },
-      { id: 3,  x: 15, y: 4 },
-      { id: 3,  x: 16, y: 5 },
-      { id: 4,  x: 17, y: 6 },
-      { id: 4,  x: 18, y: 7 },
+      { id: 8,  x: 14, y: 3 },
+      { id: 8,  x: 15, y: 4 },
+      { id: 9,  x: 16, y: 5 },   // 精英戰士
+      { id: 14, x: 17, y: 6 },
+      { id: 14, x: 18, y: 7 },
     ],
   },
   {
     // Chapter 3: elite enemies
     name: '第三章 — 決戰時刻',
-    players: [0, 9, 1, 2, 4, 8, 7, 5],
+    players: [0, 1, 2, 9, 4, 8, 7, 5],
+    lordId: 0,
     enemies: [
-      { id: 4,  x: 13, y: 3 },
-      { id: 4,  x: 14, y: 4 },
-      { id: 5,  x: 15, y: 5 },
-      { id: 5,  x: 16, y: 6 },
-      { id: 5,  x: 17, y: 7 },
-      { id: 6,  x: 18, y: 4 },
+      { id: 9,  x: 13, y: 3 },
+      { id: 10, x: 14, y: 4 },   // 凱甲武士
+      { id: 10, x: 15, y: 5 },
+      { id: 11, x: 16, y: 6 },   // 傭兵
+      { id: 14, x: 17, y: 7 },
+      { id: 15, x: 18, y: 4 },   // 突擊騎兵
     ],
   },
 ]

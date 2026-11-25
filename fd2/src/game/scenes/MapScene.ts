@@ -19,6 +19,15 @@ const TILE_COLORS: Record<number, string> = {
   [Tile.ROAD]:     '#8a7a5a',
 }
 
+// Map terrain type -> tile index in ch1 sheet (inspect ch1_labeled.png to tune)
+const TERRAIN_TILE_IDX: Record<number, number> = {
+  [Tile.PLAIN]:    0,
+  [Tile.FOREST]:   8,
+  [Tile.MOUNTAIN]: 16,
+  [Tile.WATER]:    24,
+  [Tile.ROAD]:     32,
+}
+
 function buildPlaceholderMap(): number[][] {
   const map: number[][] = []
   for (let r = 0; r < ROWS; r++) {
@@ -70,6 +79,7 @@ export class MapScene implements Scene {
   private map: number[][]
   private units: Unit[]
   private stageIndex: number
+  private lordId: number
   private cursor = { x: 5, y: 7 }
   private selected: Unit | null = null
   private reachable: Set<string> = new Set()
@@ -97,6 +107,7 @@ export class MapScene implements Scene {
   constructor(game: Game, stageIndex = 0, savedUnits?: Unit[]) {
     this.game = game
     this.stageIndex = stageIndex
+    this.lordId = STAGE_CONFIGS[stageIndex]?.lordId ?? 0
     this.map = buildPlaceholderMap()
     this.units = buildUnitsForStage(stageIndex, game.data, game.mods, savedUnits)
     this.showTurnBanner('我方行動')
@@ -152,12 +163,21 @@ export class MapScene implements Scene {
   }
 
   private drawMap(ctx: CanvasRenderingContext2D) {
+    const sprites = this.game.sprites
+    const ch = this.stageIndex + 1
     for (let r = 0; r < ROWS; r++) {
       for (let c = 0; c < COLS; c++) {
-        ctx.fillStyle = TILE_COLORS[this.map[r][c]] ?? '#3a5a2a'
-        ctx.fillRect(c * TILE_SIZE, r * TILE_SIZE, TILE_SIZE, TILE_SIZE)
-        ctx.strokeStyle = 'rgba(0,0,0,0.2)'
-        ctx.strokeRect(c * TILE_SIZE, r * TILE_SIZE, TILE_SIZE, TILE_SIZE)
+        const terrain = this.map[r][c]
+        const px = c * TILE_SIZE
+        const py = r * TILE_SIZE
+        // Always fill solid color first so transparent tile edges blend cleanly
+        ctx.fillStyle = TILE_COLORS[terrain] ?? '#3a5a2a'
+        ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE)
+        if (sprites.isReady) {
+          // Add positional variation so adjacent same-terrain tiles don't look identical
+          const variation = ((c * 3 + r * 7) % 3)
+          sprites.drawTile(ctx, ch, (TERRAIN_TILE_IDX[terrain] ?? 0) + variation, px, py)
+        }
       }
     }
   }
@@ -201,27 +221,58 @@ export class MapScene implements Scene {
   }
 
   private drawUnits(ctx: CanvasRenderingContext2D) {
+    const sprites = this.game.sprites
     for (const u of this.units) {
       const px = u.x * TILE_SIZE
       const py = u.y * TILE_SIZE
-      ctx.fillStyle = u.isPlayer
-        ? (u.moved ? '#446688' : (u === this.selected ? '#66aaff' : '#4488cc'))
-        : '#cc4444'
-      ctx.fillRect(px + 4, py + 4, TILE_SIZE - 8, TILE_SIZE - 8)
-      ctx.fillStyle = '#fff'
-      ctx.font = 'bold 11px sans-serif'
-      ctx.textAlign = 'center'
-      ctx.fillText(u.name[0], px + TILE_SIZE / 2, py + TILE_SIZE / 2 + 4)
+
+      // Resolve portrait ID: players use charId; enemies map to portrait slots after player chars
+      const enemyTypeId = u.isPlayer ? -1 : this.game.data.enemies.findIndex(e => e.name === u.name)
+      const resolvedPortraitId = u.isPlayer ? u.charId : (enemyTypeId >= 0 ? 32 + enemyTypeId : 32)
+
+      if (sprites.isReady) {
+        sprites.drawIcon(ctx, resolvedPortraitId, 0, px, py)
+        // Dim moved player units
+        if (u.moved && u.isPlayer) {
+          ctx.fillStyle = 'rgba(0,0,60,0.4)'
+          ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE)
+        }
+        // Red tint on enemies
+        if (!u.isPlayer) {
+          ctx.fillStyle = 'rgba(140,0,0,0.3)'
+          ctx.fillRect(px, py, TILE_SIZE, TILE_SIZE)
+        }
+        // Selection highlight
+        if (u === this.selected) {
+          ctx.strokeStyle = '#ffff44'
+          ctx.lineWidth = 2
+          ctx.strokeRect(px + 1, py + 1, TILE_SIZE - 2, TILE_SIZE - 2)
+          ctx.lineWidth = 1
+        }
+      } else {
+        // Fallback: colored box with initial
+        ctx.fillStyle = u.isPlayer
+          ? (u.moved ? '#446688' : (u === this.selected ? '#66aaff' : '#4488cc'))
+          : '#cc4444'
+        ctx.fillRect(px + 4, py + 4, TILE_SIZE - 8, TILE_SIZE - 8)
+        ctx.fillStyle = '#fff'
+        ctx.font = 'bold 11px sans-serif'
+        ctx.textAlign = 'center'
+        ctx.fillText(u.name[0], px + TILE_SIZE / 2, py + TILE_SIZE / 2 + 4)
+      }
+
+      // HP bar (always shown)
       const hpPct = u.hp / u.maxHp
-      ctx.fillStyle = '#333'
-      ctx.fillRect(px + 2, py + TILE_SIZE - 6, TILE_SIZE - 4, 4)
+      ctx.fillStyle = 'rgba(0,0,0,0.6)'
+      ctx.fillRect(px + 1, py + TILE_SIZE - 5, TILE_SIZE - 2, 4)
       ctx.fillStyle = hpPct > 0.5 ? '#44cc44' : hpPct > 0.25 ? '#cccc44' : '#cc4444'
-      ctx.fillRect(px + 2, py + TILE_SIZE - 6, (TILE_SIZE - 4) * hpPct, 4)
-      // Magic indicator dot
+      ctx.fillRect(px + 1, py + TILE_SIZE - 5, (TILE_SIZE - 2) * hpPct, 4)
+
+      // Magic dot
       if (u.spells.length > 0 && u.mp > 0) {
         ctx.fillStyle = '#88aaff'
         ctx.beginPath()
-        ctx.arc(px + TILE_SIZE - 5, py + 5, 3, 0, Math.PI * 2)
+        ctx.arc(px + TILE_SIZE - 4, py + 4, 3, 0, Math.PI * 2)
         ctx.fill()
       }
     }
@@ -641,6 +692,13 @@ export class MapScene implements Scene {
   private checkOutcome() {
     const players = this.units.filter(u => u.isPlayer)
     const enemies = this.units.filter(u => !u.isPlayer)
+    // Lord death = immediate defeat
+    const lordAlive = players.some(u => u.charId === this.lordId)
+    if (!lordAlive && players.length > 0) {
+      this.phase = 'defeat'
+      this.showTurnBanner('索爾陣亡！敗北...')
+      return
+    }
     if (enemies.length === 0) {
       this.phase = 'victory'
       this.showTurnBanner('勝利！')
